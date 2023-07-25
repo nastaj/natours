@@ -1,3 +1,5 @@
+@use "../abstracts/variables" as variables;
+
 .btn {
   &:link,
   &:visited {
@@ -13,7 +15,7 @@
 
   &:hover {
     transform: translateY(-3px);
-    box-shadow: 0 1rem 2rem rgba($color-black, 0.2);
+    box-shadow: 0 1rem 2rem rgba(variables.$color-black, 0.2);
 
     &::after {
       transform: scaleX(1.4) scaleY(1.6);
@@ -23,7 +25,7 @@
 
   &:active {
     transform: translateY(-1px);
-    box-shadow: 0 0.5rem 1rem rgba($color-black, 0.2);
+    box-shadow: 0 0.5rem 1rem rgba(variables.$color-black, 0.2);
   }
 
   &::after {
@@ -45,11 +47,11 @@
   }
 
   &--white {
-    background-color: $color-white;
-    color: $color-grey-dark;
+    background-color: variables.$color-white;
+    color: variables.$color-grey-dark;
 
     &::after {
-      background-color: $color-white;
+      background-color: variables.$color-white;
     }
   }
 }

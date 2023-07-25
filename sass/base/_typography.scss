@@ -1,13 +1,15 @@
+@use "../abstracts/variables" as variables;
+
 body {
   font-family: "Lato", sans-serif;
   font-weight: 400;
   /* font-size: 16px; */
   line-height: 1.7;
-  color: $color-grey-dark;
+  color: variables.$color-grey-dark;
 }
 
 .heading-primary {
-  color: #fff;
+  color: variables.$color-white;
   text-transform: uppercase;
   margin-bottom: 6rem;
 
