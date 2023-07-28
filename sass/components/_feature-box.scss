@@ -1,0 +1,49 @@
+@use "../abstracts/variables" as variables;
+
+.feature-box {
+  background-color: rgba(variables.$color-white, 0.8);
+  font-size: 1.5rem;
+  padding: 2.5rem;
+  text-align: center;
+  border-radius: 3px;
+  box-shadow: 0 1.5rem 4rem rgba(variables.$color-black, 0.15);
+  transition: transform 0.3s;
+
+  &__icon {
+    height: 6rem;
+    width: 6rem;
+    background-image: linear-gradient(
+      to right,
+      variables.$color-primary-light,
+      variables.$color-primary-dark
+    );
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-size: cover;
+    mask-size: cover;
+
+    &--earth {
+      -webkit-mask-image: url(../../img/basic_world.svg);
+      mask-image: url(../../img/basic_world.svg);
+    }
+
+    &--compass {
+      -webkit-mask-image: url(../../img/basic_compass.svg);
+      mask-image: url(../../img/basic_compass.svg);
+    }
+
+    &--map {
+      -webkit-mask-image: url(../../img/basic_map.svg);
+      mask-image: url(../../img/basic_map.svg);
+    }
+
+    &--heart {
+      -webkit-mask-image: url(../../img/basic_heart.svg);
+      mask-image: url(../../img/basic_heart.svg);
+    }
+  }
+
+  &:hover {
+    transform: translateY(-1.5rem) scale(1.03);
+  }
+}
