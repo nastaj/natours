@@ -1,0 +1,41 @@
+@use "../abstracts/variables" as variables;
+
+.row {
+  max-width: variables.$grid-width;
+  margin: 0 auto;
+
+  display: flex;
+  gap: variables.$gutter-horizontal;
+
+  &:not(:last-child) {
+    margin-bottom: variables.$gutter-vertical;
+  }
+
+  //   [class^="col-"] {
+  //     text-align: center;
+  //   }
+
+  .col-1-of-2 {
+    flex: 1;
+  }
+
+  .col-1-of-3 {
+    flex: 1;
+  }
+
+  .col-2-of-3 {
+    flex: 2;
+  }
+
+  .col-1-of-4 {
+    flex: 1;
+  }
+
+  .col-2-of-4 {
+    flex: 2;
+  }
+
+  .col-3-of-4 {
+    flex: 3;
+  }
+}
