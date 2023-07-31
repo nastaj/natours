@@ -1,10 +1,23 @@
-@use "../abstracts/variables";
+@use "../abstracts/variables" as variables;
+@use "../abstracts/mixins" as mixins;
 
 .footer {
   background-color: variables.$color-grey-dark-3;
   padding: 10rem 0;
   font-size: 1.4rem;
   color: variables.$color-grey-light-1;
+
+  @include mixins.respond(tab-port) {
+    padding: 8rem 0;
+  }
+
+  .row {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: none;
+  }
 
   &__logo-box {
     text-align: center;
@@ -52,5 +65,11 @@
     padding-top: 2rem;
     width: 80%;
     float: right;
+
+    @include mixins.respond(tab-port) {
+      display: inline-block;
+      float: none;
+      width: 100%;
+    }
   }
 }

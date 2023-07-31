@@ -1,4 +1,5 @@
 @use "../abstracts/variables" as variables;
+@use "../abstracts/mixins" as mixins;
 
 .row {
   max-width: variables.$grid-width;
@@ -9,6 +10,17 @@
 
   &:not(:last-child) {
     margin-bottom: variables.$gutter-vertical;
+
+    @include mixins.respond(tab-port) {
+      margin-bottom: 0;
+    }
+  }
+
+  @include mixins.respond(tab-port) {
+    flex-direction: column;
+    gap: variables.$gutter-vertical-small;
+    max-width: 50rem;
+    padding: 0 3rem;
   }
 
   //   [class^="col-"] {
