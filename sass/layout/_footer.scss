@@ -12,16 +12,22 @@
   }
 
   .row {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    max-width: none;
+    @include mixins.respond(tab-port) {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      max-width: none;
+    }
   }
 
   &__logo-box {
     text-align: center;
     margin-bottom: 8rem;
+
+    @include mixins.respond(tab-port) {
+      margin-bottom: 6rem;
+    }
   }
 
   &__logo {
@@ -67,6 +73,7 @@
     float: right;
 
     @include mixins.respond(tab-port) {
+      text-align: center;
       display: inline-block;
       float: none;
       width: 100%;
