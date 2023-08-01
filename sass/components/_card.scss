@@ -78,7 +78,17 @@
           variables.$color-secondary-light,
           variables.$color-secondary-dark
         ),
-        url(../img/nat-5.jpg);
+        url(../img/nat-5-small.jpg);
+
+      @media (min-resolution: 192dpi) and (min-width: 37.5em),
+        (min-width: 125em) {
+        background-image: linear-gradient(
+            to right bottom,
+            variables.$color-secondary-light,
+            variables.$color-secondary-dark
+          ),
+          url(../img/nat-5.jpg);
+      }
     }
 
     &--2 {
@@ -87,7 +97,17 @@
           variables.$color-primary-light,
           variables.$color-primary-dark
         ),
-        url(../img/nat-6.jpg);
+        url(../img/nat-6-small.jpg);
+
+      @media (min-resolution: 192dpi) and (min-width: 37.5em),
+        (min-width: 125em) {
+        background-image: linear-gradient(
+            to right bottom,
+            variables.$color-primary-light,
+            variables.$color-primary-dark
+          ),
+          url(../img/nat-6.jpg);
+      }
     }
 
     &--3 {
@@ -96,7 +116,17 @@
           variables.$color-tertiary-light,
           variables.$color-tertiary-dark
         ),
-        url(../img/nat-7.jpg);
+        url(../img/nat-7-small.jpg);
+
+      @media (min-resolution: 192dpi) and (min-width: 37.5em),
+        (min-width: 125em) {
+        background-image: linear-gradient(
+            to right bottom,
+            variables.$color-tertiary-light,
+            variables.$color-tertiary-dark
+          ),
+          url(../img/nat-7.jpg);
+      }
     }
   }
 
@@ -187,48 +217,48 @@
   }
 
   @include mixins.respond(tab-port) {
-  height: auto;
-  border-radius: 3px;
-  background-color: variables.$color-white;
-  box-shadow: 0 1.5rem 4rem rgba(variables.$color-black, 0.15);
-
-  &__side {
     height: auto;
-    position: relative;
-    box-shadow: none;
+    border-radius: 3px;
+    background-color: variables.$color-white;
+    box-shadow: 0 1.5rem 4rem rgba(variables.$color-black, 0.15);
 
-    &--back {
-      transform: rotateY(0);
-      clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 100%);
+    &__side {
+      height: auto;
+      position: relative;
+      box-shadow: none;
+
+      &--back {
+        transform: rotateY(0);
+        clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 100%);
+      }
     }
-  }
 
-  &:hover &__side--front {
-    transform: rotateY(0);
-  }
+    &:hover &__side--front {
+      transform: rotateY(0);
+    }
 
-  &__details {
-    padding: 1rem 3rem;
-  }
+    &__details {
+      padding: 1rem 3rem;
+    }
 
-  // FRONT SIDE STYLING
-  &__cta {
-    height: auto;
-    display: block;
-    text-align: center;
-    padding: 7rem 4rem 4rem 4rem;
-  }
+    // FRONT SIDE STYLING
+    &__cta {
+      height: auto;
+      display: block;
+      text-align: center;
+      padding: 7rem 4rem 4rem 4rem;
+    }
 
-  &__price-box {
-    margin-bottom: 3rem;
-  }
+    &__price-box {
+      margin-bottom: 3rem;
+    }
 
-  &__price-only {
-    font-size: 1.4rem;
-  }
+    &__price-only {
+      font-size: 1.4rem;
+    }
 
-  &__price-value {
-    font-size: 4rem;
-  }
+    &__price-value {
+      font-size: 4rem;
+    }
   }
 }

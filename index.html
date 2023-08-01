@@ -28,25 +28,29 @@
       <nav class="navigation__nav">
         <ul class="navigation__list">
           <li class="navigation__item">
-            <a href="#" class="navigation__link"
+            <a href="#section-about" class="navigation__link"
               ><span>01</span> About Natours</a
             >
           </li>
           <li class="navigation__item">
-            <a href="#" class="navigation__link"
+            <a href="#section-features" class="navigation__link"
               ><span>02</span> Your benefits</a
             >
           </li>
           <li class="navigation__item">
-            <a href="#" class="navigation__link"
-              ><span>02</span> Popular tours</a
+            <a href="#section-tours" class="navigation__link"
+              ><span>03</span> Popular tours</a
             >
           </li>
           <li class="navigation__item">
-            <a href="#" class="navigation__link"><span>03</span> Stories</a>
+            <a href="#section-stories" class="navigation__link"
+              ><span>04</span> Stories</a
+            >
           </li>
           <li class="navigation__item">
-            <a href="#" class="navigation__link"><span>04</span> Book now</a>
+            <a href="#section-book" class="navigation__link"
+              ><span>05</span> Book now</a
+            >
           </li>
         </ul>
       </nav>
@@ -74,7 +78,7 @@
     </header>
 
     <main>
-      <section class="section-about">
+      <section class="section-about" id="section-about">
         <div class="u-center-text u-margin-bottom-lg">
           <h2 class="heading-secondary">
             Exciting tours for adventurous people
@@ -107,6 +111,28 @@
           <div class="col-1-of-2">
             <figure class="composition">
               <img
+                srcset="img/nat-1.jpg 300w, img/nat-1-large.jpg 1000w"
+                sizes="(max-width: 56.25em) 20vw, (max-width: 37.5em) 30vw, 300px"
+                alt="Photo 1"
+                class="composition__photo composition__photo--p1"
+                src="img/nat-1-large.jpg"
+              />
+              <img
+                srcset="img/nat-2.jpg 300w, img/nat-2-large.jpg 1000w"
+                sizes="(max-width: 56.25em) 20vw, (max-width: 37.5em) 30vw, 300px"
+                alt="Photo 2"
+                class="composition__photo composition__photo--p2"
+                src="img/nat-2-large.jpg"
+              />
+              <img
+                srcset="img/nat-3.jpg 300w, img/nat-3-large.jpg 1000w"
+                sizes="(max-width: 56.25em) 20vw, (max-width: 37.5em) 30vw, 300px"
+                alt="Photo 3"
+                class="composition__photo composition__photo--p3"
+                src="img/nat-3-large.jpg"
+              />
+
+              <!-- <img
                 src="img/nat-1-large.jpg"
                 alt="Photo 1"
                 class="composition__photo composition__photo--p1"
@@ -120,13 +146,13 @@
                 src="img/nat-3-large.jpg"
                 alt="Photo 3"
                 class="composition__photo composition__photo--p3"
-              />
+              /> -->
             </figure>
           </div>
         </div>
       </section>
 
-      <section class="section-features">
+      <section class="section-features" id="section-features">
         <div class="row">
           <div class="col-1-of-4">
             <figure class="feature-box">
@@ -287,7 +313,7 @@
         </div>
       </section>
 
-      <section class="section-stories">
+      <section class="section-stories" id="section-stories">
         <div class="bg-video">
           <video class="bg-video__content" autoplay muted loop>
             <source src="img/video.mp4" type="video/mp4" />
@@ -304,6 +330,8 @@
           <div class="story">
             <figure class="story__shape">
               <img
+                srcset="img/nat-8-large.jpg 2000w, img/nat-8.jpg 1000w"
+                sizes="(max-width: 56.25em) 30vw, (max-width: 37.5em) 40vw"
                 src="img/nat-8.jpg"
                 alt="Person on a tour"
                 class="story__img"
@@ -329,6 +357,8 @@
           <div class="story">
             <figure class="story__shape">
               <img
+                srcset="img/nat-9-large.jpg 2000w, img/nat-9.jpg 1000w"
+                sizes="(max-width: 56.25em) 30vw, (max-width: 37.5em) 40vw"
                 src="img/nat-9.jpg"
                 alt="Person on a tour"
                 class="story__img"
@@ -356,7 +386,7 @@
         </div>
       </section>
 
-      <section class="section-book">
+      <section class="section-book" id="section-book">
         <div class="row">
           <div class="book">
             <div class="book__form">
@@ -430,7 +460,20 @@
 
     <footer class="footer">
       <div class="footer__logo-box">
-        <img src="img/logo-green-2x.png" alt="Full logo" class="footer__logo" />
+        <picture class="footer__logo">
+          <source
+            srcset="
+              img/logo-green-small-1x.png 1x,
+              img/logo-green-small-2x.png 2x
+            "
+            media="(max-width: 37.5em)"
+          />
+          <img
+            srcset="img/logo-green-1x.png 1x, img/logo-green-2x.png 2x"
+            alt="Full logo"
+            src="img/logo-green-2x.png"
+          />
+        </picture>
       </div>
       <div class="row">
         <div class="col-1-of-2">
@@ -471,8 +514,20 @@
       <a href="#section-tours" class="popup__close-bg"></a>
       <div class="popup__content">
         <div class="popup__left">
-          <img src="img/nat-8.jpg" alt="Tour photo" class="popup__img" />
-          <img src="img/nat-9.jpg" alt="Tour photo" class="popup__img" />
+          <img
+            srcset="img/nat-8-large.jpg 2000w, img/nat-8.jpg 1000w"
+            sizes="(max-width: 56.25em) 30vw, (max-width: 37.5em) 40vw"
+            src="img/nat-8.jpg"
+            alt="Person on a tour"
+            class="popup__img"
+          />
+          <img
+            srcset="img/nat-9-large.jpg 2000w, img/nat-9.jpg 1000w"
+            sizes="(max-width: 56.25em) 30vw, (max-width: 37.5em) 40vw"
+            src="img/nat-9.jpg"
+            alt="Person on a tour"
+            class="popup__img"
+          />
         </div>
         <div class="popup__right">
           <a href="#section-tours" class="popup__close">&times;</a>
